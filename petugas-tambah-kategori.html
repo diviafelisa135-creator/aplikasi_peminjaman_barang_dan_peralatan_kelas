@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tambah Kategori — Peminjaman Barang Kelas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Peminjaman Barang Kelas</div>
+    <nav>
+      <a href="petugas-dashboard.html">Dashboard</a>
+      <a href="petugas-barang.html">Data barang</a>
+      <a class="active" href="petugas-kategori.html">Kategori</a>
+      <a href="petugas-peminjam.html">Data peminjam</a>
+      <a href="petugas-transaksi.html">Transaksi</a>
+      <a href="petugas-laporan.html">Laporan</a>
+    </nav>
+    <div class="user">Nama petugas | <a href="index.html">Keluar</a></div>
+  </header>
+
+  <main>
+    <h1>Tambah kategori</h1>
+    <p class="subtitle">Isi data kategori baru.</p>
+
+    <div class="card form-card">
+      <form action="petugas-kategori.html" method="get">
+        <label for="kode">Kode kategori</label>
+        <input type="text" id="kode" value="KAT 005" readonly>
+
+        <label for="nama">Nama kategori</label>
+        <input type="text" id="nama" placeholder="Nama kategori" required>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Simpan kategori</button>
+          <a class="btn secondary" href="petugas-kategori.html">Batal</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

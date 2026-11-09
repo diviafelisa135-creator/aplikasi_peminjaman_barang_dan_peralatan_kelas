@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login — Peminjaman Barang Kelas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-wrap">
+    <div class="card login-card">
+      <h1>Peminjaman Barang Kelas</h1>
+      <p class="subtitle">Masuk ke aplikasi</p>
+
+      <form action="katalog.html" method="get">
+        <label for="nim">NIM / ID petugas</label>
+        <input type="text" id="nim" name="nim" placeholder="Masukkan NIM atau ID" required>
+
+        <label for="password">Kata sandi</label>
+        <input type="password" id="password" name="password" placeholder="********" required>
+
+        <div class="error" id="gagal">NIM atau kata sandi salah. Periksa lagi lalu coba masuk.</div>
+
+        <button type="submit" class="btn block">Masuk</button>
+      </form>
+
+      <div class="demo-note">
+        Tombol <em>Masuk</em> membuka halaman peminjam.<br>
+        <a href="petugas-dashboard.html">Masuk sebagai petugas</a> &middot;
+        <a href="#gagal">Lihat contoh pesan error</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

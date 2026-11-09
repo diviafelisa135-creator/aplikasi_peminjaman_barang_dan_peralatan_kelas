@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Peminjam — Peminjaman Barang Kelas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Peminjaman Barang Kelas</div>
+    <nav>
+      <a href="petugas-dashboard.html">Dashboard</a>
+      <a href="petugas-barang.html">Data barang</a>
+      <a href="petugas-kategori.html">Kategori</a>
+      <a class="active" href="petugas-peminjam.html">Data peminjam</a>
+      <a href="petugas-transaksi.html">Transaksi</a>
+      <a href="petugas-laporan.html">Laporan</a>
+    </nav>
+    <div class="user">Nama petugas | <a href="index.html">Keluar</a></div>
+  </header>
+
+  <main>
+    <h1>Data peminjam</h1>
+    <p class="subtitle">Daftar peminjam terdaftar (contoh data).</p>
+
+    <div class="toolbar">
+      <input type="search" id="cari-tabel" class="grow" placeholder="Cari nama atau NIM...">
+    </div>
+
+    <div class="card table-card">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>NIM</th><th>Nama</th><th>Kelas</th><th>Sedang dipinjam</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2024001</td><td>Nama A</td><td>IF-1A</td><td>1</td></tr>
+            <tr><td>2024002</td><td>Nama B</td><td>IF-1A</td><td>2</td></tr>
+            <tr><td>2024003</td><td>Nama C</td><td>IF-1B</td><td>2</td></tr>
+            <tr><td>2024004</td><td>Nama D</td><td>IF-1B</td><td>0</td></tr>
+            <tr><td>2024005</td><td>Nama E</td><td>IF-1C</td><td>1</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Katalog Barang — Peminjaman Barang Kelas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Peminjaman Barang Kelas</div>
+    <nav>
+      <a class="active" href="katalog.html">Katalog barang</a>
+      <a href="history.html">History peminjaman saya</a>
+    </nav>
+    <div class="user">Nama peminjam | <a href="index.html">Keluar</a></div>
+  </header>
+
+  <main>
+    <h1>Katalog barang</h1>
+    <p class="subtitle">Pilih barang yang ingin dipinjam.</p>
+
+    <!-- Filter CSS murni: radio tersembunyi + label sebagai tombol -->
+    <input class="fr" type="radio" name="kat" id="kat-all" checked>
+    <input class="fr" type="radio" name="kat" id="kat-elek">
+    <input class="fr" type="radio" name="kat" id="kat-atk">
+    <input class="fr" type="radio" name="kat" id="kat-perl">
+    <input class="fr" type="radio" name="st" id="st-all" checked>
+    <input class="fr" type="radio" name="st" id="st-ada">
+    <input class="fr" type="radio" name="st" id="st-habis">
+
+    <div class="toolbar">
+      <input type="search" class="grow" placeholder="Cari nama barang...">
+    </div>
+    <div class="toolbar">
+      <span class="hint">Kategori:</span>
+      <label class="chip" for="kat-all">Semua</label>
+      <label class="chip" for="kat-elek">Elektronik</label>
+      <label class="chip" for="kat-atk">ATK</label>
+      <label class="chip" for="kat-perl">Perlengkapan</label>
+      <span class="hint">Ketersediaan:</span>
+      <label class="chip" for="st-all">Semua</label>
+      <label class="chip" for="st-ada">Tersedia</label>
+      <label class="chip" for="st-habis">Habis</label>
+    </div>
+
+    <div class="grid">
+      <div class="card item-card item" data-kat="elek" data-st="ada">
+        <h3>Proyektor</h3>
+        <span class="cat">Elektronik</span>
+        <span class="stock">Stok: 3 dari 5</span>
+        <div class="foot">
+          <span class="badge ok">Tersedia</span>
+          <a class="btn small" href="pinjam.html">Pinjam</a>
+        </div>
+      </div>
+
+      <div class="card item-card item" data-kat="elek" data-st="ada">
+        <h3>Kabel HDMI</h3>
+        <span class="cat">Elektronik</span>
+        <span class="stock">Stok: 6 dari 8</span>
+        <div class="foot">
+          <span class="badge ok">Tersedia</span>
+          <a class="btn small" href="pinjam.html">Pinjam</a>
+        </div>
+      </div>
+
+      <div class="card item-card item" data-kat="atk" data-st="habis">
+        <h3>Spidol papan tulis</h3>
+        <span class="cat">ATK</span>
+        <span class="stock">Stok: 0 dari 20</span>
+        <div class="foot">
+          <span class="badge bad">Habis</span>
+          <span class="btn small disabled">Pinjam</span>
+        </div>
+      </div>
+
+      <div class="card item-card item" data-kat="perl" data-st="ada">
+        <h3>Remote AC</h3>
+        <span class="cat">Perlengkapan</span>
+        <span class="stock">Stok: 1 dari 4</span>
+        <div class="foot">
+          <span class="badge ok">Tersedia</span>
+          <a class="btn small" href="pinjam.html">Pinjam</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pagination">
+      <span class="btn small secondary disabled">&lt;</span>
+      <span>Halaman 1 dari 3</span>
+      <span class="btn small secondary disabled">&gt;</span>
+    </div>
+  </main>
+</body>
+</html>

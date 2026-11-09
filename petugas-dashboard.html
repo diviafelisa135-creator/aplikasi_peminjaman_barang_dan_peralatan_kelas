@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard — Peminjaman Barang Kelas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Peminjaman Barang Kelas</div>
+    <nav>
+      <a class="active" href="petugas-dashboard.html">Dashboard</a>
+      <a href="petugas-barang.html">Data barang</a>
+      <a href="petugas-kategori.html">Kategori</a>
+      <a href="petugas-peminjam.html">Data peminjam</a>
+      <a href="petugas-transaksi.html">Transaksi</a>
+      <a href="petugas-laporan.html">Laporan</a>
+    </nav>
+    <div class="user">Nama petugas | <a href="index.html">Keluar</a></div>
+  </header>
+
+  <main>
+    <h1>Dashboard</h1>
+    <p class="subtitle">Ringkasan peminjaman barang kelas.</p>
+
+    <div class="stats">
+      <div class="card stat primary"><div class="num">128</div><div class="lbl">Total barang</div></div>
+      <div class="card stat ok"><div class="num">17</div><div class="lbl">Sedang dipinjam</div></div>
+      <div class="card stat warn"><div class="num">4</div><div class="lbl">Menunggu persetujuan</div></div>
+      <div class="card stat bad"><div class="num">2</div><div class="lbl">Terlambat kembali</div></div>
+    </div>
+
+    <h2>Notifikasi pengajuan terbaru</h2>
+    <div class="card table-card">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Peminjam</th><th>Barang</th><th>Jml</th><th>Tanggal</th><th>Aksi</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nama A</td><td>Proyektor</td><td>1</td><td>22/10</td>
+              <td class="actions">
+                <a class="btn small success" href="petugas-transaksi.html">Setujui</a>
+                <a class="btn small danger" href="petugas-transaksi.html">Tolak</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Nama B</td><td>Kabel HDMI</td><td>2</td><td>22/10</td>
+              <td class="actions">
+                <a class="btn small success" href="petugas-transaksi.html">Setujui</a>
+                <a class="btn small danger" href="petugas-transaksi.html">Tolak</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

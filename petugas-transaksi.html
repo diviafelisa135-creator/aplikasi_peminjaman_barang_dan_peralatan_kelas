@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transaksi — Peminjaman Barang Kelas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Peminjaman Barang Kelas</div>
+    <nav>
+      <a href="petugas-dashboard.html">Dashboard</a>
+      <a href="petugas-barang.html">Data barang</a>
+      <a href="petugas-kategori.html">Kategori</a>
+      <a href="petugas-peminjam.html">Data peminjam</a>
+      <a class="active" href="petugas-transaksi.html">Transaksi</a>
+      <a href="petugas-laporan.html">Laporan</a>
+    </nav>
+    <div class="user">Nama petugas | <a href="index.html">Keluar</a></div>
+  </header>
+
+  <main>
+    <h1>Transaksi peminjaman</h1>
+    <p class="subtitle">Setujui pengajuan dan catat pengembalian barang.</p>
+
+    <div class="toolbar">
+      <input type="search" id="cari-tabel" class="grow" placeholder="Cari peminjam atau barang...">
+      <select data-filter-col="6">
+        <option value="">Status ▾</option>
+        <option>Menunggu</option>
+        <option>Dipinjam</option>
+        <option>Dikembalikan</option>
+      </select>
+      <select>
+        <option>Tanggal ▾</option>
+        <option>Terbaru</option>
+        <option>Terlama</option>
+      </select>
+      <span class="spacer"></span>
+      <a class="btn" href="petugas-pengembalian.html">+ Catat peminjaman</a>
+    </div>
+
+    <div class="card table-card">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>No</th><th>Peminjam</th><th>Barang</th><th>Jml</th><th>Pinjam</th><th>Kembali</th><th>Status</th><th>Aksi</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>T 014</td><td>Nama A</td><td>Proyektor</td><td>1</td><td>22/10</td><td>23/10</td>
+              <td><span class="badge status warn">Menunggu</span></td>
+              <td class="actions">
+                <a class="btn small success" href="petugas-transaksi.html">Setujui</a>
+                <a class="btn small danger" href="petugas-transaksi.html">Tolak</a>
+              </td>
+            </tr>
+            <tr>
+              <td>T 013</td><td>Nama C</td><td>Kabel HDMI</td><td>2</td><td>20/10</td><td>22/10</td>
+              <td><span class="badge status info">Dipinjam</span></td>
+              <td class="actions"><a class="btn small secondary" href="petugas-pengembalian.html">Catat kembali</a></td>
+            </tr>
+            <tr>
+              <td>T 012</td><td>Nama D</td><td>Remote AC</td><td>1</td><td>15/10</td><td>16/10</td>
+              <td><span class="badge status ok">Dikembalikan</span></td>
+              <td class="actions"><a class="btn small secondary" href="#">Detail</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

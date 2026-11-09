@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catat Pengembalian — Peminjaman Barang Kelas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Peminjaman Barang Kelas</div>
+    <nav>
+      <a href="petugas-dashboard.html">Dashboard</a>
+      <a href="petugas-barang.html">Data barang</a>
+      <a href="petugas-kategori.html">Kategori</a>
+      <a href="petugas-peminjam.html">Data peminjam</a>
+      <a class="active" href="petugas-transaksi.html">Transaksi</a>
+      <a href="petugas-laporan.html">Laporan</a>
+    </nav>
+    <div class="user">Nama petugas | <a href="index.html">Keluar</a></div>
+  </header>
+
+  <main>
+    <h1>Catat pengembalian T-013</h1>
+    <p class="subtitle">Nama C &middot; Kabel HDMI &middot; 2 unit</p>
+
+    <div class="card form-card">
+      <form action="petugas-transaksi.html" method="get">
+        <label for="tgl-kembali">Tanggal pengembalian</label>
+        <input type="date" id="tgl-kembali" required>
+
+        <label for="kondisi">Kondisi barang</label>
+        <select id="kondisi">
+          <option>Baik</option>
+          <option>Rusak ringan</option>
+          <option>Rusak berat</option>
+          <option>Hilang</option>
+        </select>
+
+        <label for="catatan">Catatan</label>
+        <textarea id="catatan" placeholder="Opsional"></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Simpan pengembalian</button>
+          <a class="btn secondary" href="petugas-transaksi.html">Batal</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

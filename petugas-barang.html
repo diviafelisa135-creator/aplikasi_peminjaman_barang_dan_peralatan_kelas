@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Barang — Peminjaman Barang Kelas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Peminjaman Barang Kelas</div>
+    <nav>
+      <a href="petugas-dashboard.html">Dashboard</a>
+      <a class="active" href="petugas-barang.html">Data barang</a>
+      <a href="petugas-kategori.html">Kategori</a>
+      <a href="petugas-peminjam.html">Data peminjam</a>
+      <a href="petugas-transaksi.html">Transaksi</a>
+      <a href="petugas-laporan.html">Laporan</a>
+    </nav>
+    <div class="user">Nama petugas | <a href="index.html">Keluar</a></div>
+  </header>
+
+  <main>
+    <h1>Data barang</h1>
+    <p class="subtitle">Kelola daftar barang dan peralatan kelas.</p>
+
+    <div class="toolbar">
+      <input type="search" id="cari-tabel" class="grow" placeholder="Cari nama atau kode...">
+      <select data-filter-col="2">
+        <option value="">Kategori ▾</option>
+        <option>Elektronik</option>
+        <option>ATK</option>
+        <option>Perlengkapan</option>
+        <option>Lainnya</option>
+      </select>
+      <select data-filter-col="3">
+        <option value="">Kondisi ▾</option>
+        <option>Baik</option>
+        <option>Rusak ringan</option>
+      </select>
+      <span class="spacer"></span>
+      <a class="btn" href="petugas-tambah-barang.html">+ Tambah barang</a>
+    </div>
+
+    <div class="card table-card">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Kode</th><th>Nama</th><th>Kategori</th><th>Kondisi</th><th>Total</th><th>Tersedia</th><th>Aksi</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>BRG 001</td><td>Proyektor</td><td>Elektronik</td><td>Baik</td><td>5</td><td>3</td>
+              <td class="actions"><a class="btn small secondary" href="petugas-tambah-barang.html">Ubah</a><a class="btn small danger" href="petugas-barang.html">Hapus</a></td>
+            </tr>
+            <tr>
+              <td>BRG 002</td><td>Spidol</td><td>ATK</td><td>Baik</td><td>20</td><td>0</td>
+              <td class="actions"><a class="btn small secondary" href="petugas-tambah-barang.html">Ubah</a><a class="btn small danger" href="petugas-barang.html">Hapus</a></td>
+            </tr>
+            <tr>
+              <td>BRG 003</td><td>Remote AC</td><td>Perlengkapan</td><td>Rusak ringan</td><td>4</td><td>1</td>
+              <td class="actions"><a class="btn small secondary" href="petugas-tambah-barang.html">Ubah</a><a class="btn small danger" href="petugas-barang.html">Hapus</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

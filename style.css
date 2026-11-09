@@ -1,0 +1,259 @@
+/* ===== Peminjaman Barang Kelas — gaya bersama ===== */
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --ok: #15803d;
+  --ok-bg: #dcfce7;
+  --warn: #b45309;
+  --warn-bg: #fef3c7;
+  --bad: #b91c1c;
+  --bad-bg: #fee2e2;
+  --info: #1d4ed8;
+  --info-bg: #dbeafe;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Top bar ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 12px 28px;
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.brand { font-weight: 700; font-size: 1.1rem; color: var(--primary); }
+.topbar nav { display: flex; gap: 4px; flex-wrap: wrap; flex: 1; }
+.topbar nav a {
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: var(--muted);
+  font-weight: 500;
+}
+.topbar nav a:hover { background: var(--bg); text-decoration: none; }
+.topbar nav a.active { background: var(--info-bg); color: var(--primary); }
+.user { color: var(--muted); font-size: .92rem; }
+.user a { font-weight: 600; }
+
+/* ---------- Layout ---------- */
+main { max-width: 1100px; margin: 0 auto; padding: 28px 20px 60px; }
+h1 { margin: 0 0 4px; font-size: 1.6rem; }
+.subtitle { color: var(--muted); margin: 0 0 22px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.toolbar .grow { flex: 1; min-width: 200px; }
+.toolbar .spacer { flex: 1; }
+
+/* ---------- Form ---------- */
+label { display: block; font-weight: 600; font-size: .9rem; margin: 14px 0 6px; }
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+  background: #fff;
+  color: var(--text);
+}
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #bfdbfe;
+  border-color: var(--primary);
+}
+textarea { min-height: 80px; resize: vertical; }
+.toolbar input, .toolbar select { width: auto; }
+.toolbar input.grow { width: auto; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.hint { color: var(--muted); font-size: .85rem; margin-top: 4px; }
+.error {
+  display: none;
+  margin-top: 6px;
+  padding: 10px 12px;
+  background: var(--bad-bg);
+  color: var(--bad);
+  border-radius: 8px;
+  font-size: .9rem;
+}
+.error.show { display: block; }
+.invalid { border-color: var(--bad) !important; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 9px 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  background: var(--primary);
+  color: #fff;
+}
+.btn:hover { background: var(--primary-dark); text-decoration: none; }
+.btn.secondary { background: #fff; color: var(--text); border-color: #cbd5e1; }
+.btn.secondary:hover { background: var(--bg); }
+.btn.danger { background: var(--bad); }
+.btn.success { background: var(--ok); }
+.btn.small { padding: 5px 10px; font-size: .85rem; }
+.btn.block { width: 100%; margin-top: 18px; }
+.btn[disabled], .btn.disabled { opacity: .45; pointer-events: none; }
+.form-actions { display: flex; gap: 10px; margin-top: 22px; }
+
+/* ---------- Badges ---------- */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 600;
+}
+.badge.ok { background: var(--ok-bg); color: var(--ok); }
+.badge.warn { background: var(--warn-bg); color: var(--warn); }
+.badge.bad { background: var(--bad-bg); color: var(--bad); }
+.badge.info { background: var(--info-bg); color: var(--info); }
+.badge.gray { background: #e5e7eb; color: #374151; }
+
+/* ---------- Login ---------- */
+.login-wrap { min-height: 100vh; display: grid; place-items: center; padding: 20px; }
+.login-card { width: 100%; max-width: 400px; }
+.login-card h1 { text-align: center; color: var(--primary); }
+.login-card .subtitle { text-align: center; }
+.demo-note {
+  margin-top: 18px;
+  padding: 10px 12px;
+  background: var(--info-bg);
+  color: var(--info);
+  border-radius: 8px;
+  font-size: .85rem;
+}
+
+/* ---------- Katalog ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+.item-card { display: flex; flex-direction: column; gap: 6px; }
+.item-card h3 { margin: 0; font-size: 1.1rem; }
+.item-card .cat { color: var(--muted); font-size: .88rem; }
+.item-card .stock { font-weight: 600; margin: 6px 0 10px; }
+.item-card .foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; }
+.empty { display: none; text-align: center; color: var(--muted); padding: 30px; }
+.empty.show { display: block; }
+
+.pagination { display: flex; justify-content: center; align-items: center; gap: 14px; margin-top: 26px; color: var(--muted); }
+
+/* ---------- Tabel ---------- */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: var(--card); }
+th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { background: #f9fafb; font-size: .85rem; text-transform: uppercase; letter-spacing: .03em; color: var(--muted); }
+tbody tr:hover { background: #f9fafb; }
+td.actions { display: flex; gap: 6px; }
+.table-card { padding: 0; overflow: hidden; }
+
+/* ---------- Dashboard ---------- */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; margin-bottom: 26px; }
+.stat .num { font-size: 2rem; font-weight: 700; line-height: 1.1; }
+.stat .lbl { color: var(--muted); font-size: .92rem; }
+.stat.primary .num { color: var(--primary); }
+.stat.ok .num { color: var(--ok); }
+.stat.warn .num { color: var(--warn); }
+.stat.bad .num { color: var(--bad); }
+h2 { font-size: 1.15rem; margin: 0 0 12px; }
+
+.form-card { max-width: 960px; }
+
+/* ---------- Print ---------- */
+@media print {
+  .topbar, .toolbar, .no-print { display: none !important; }
+  body { background: #fff; }
+  .card { border: none; }
+}
+
+@media (max-width: 640px) {
+  .row { grid-template-columns: 1fr; }
+  .topbar { padding: 10px 14px; }
+  main { padding: 18px 12px 40px; }
+}
+
+/* ===== Interaksi tanpa JavaScript ===== */
+
+/* Pesan error login: tampil saat URL berakhiran #gagal */
+.error:target { display: block; }
+
+/* Pesan jumlah melebihi stok: tampil otomatis saat input tidak valid */
+input:invalid:not(:placeholder-shown) + .error,
+#jumlah:invalid + .error { display: block; }
+#jumlah:invalid { border-color: var(--bad); }
+
+/* Filter katalog dengan radio tersembunyi */
+.fr { position: absolute; opacity: 0; pointer-events: none; }
+.chip {
+  display: inline-block;
+  margin: 0;
+  padding: 6px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text);
+  font-size: .88rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.chip:hover { background: var(--bg); }
+
+#kat-all:checked ~ .toolbar label[for="kat-all"],
+#kat-elek:checked ~ .toolbar label[for="kat-elek"],
+#kat-atk:checked ~ .toolbar label[for="kat-atk"],
+#kat-perl:checked ~ .toolbar label[for="kat-perl"],
+#st-all:checked ~ .toolbar label[for="st-all"],
+#st-ada:checked ~ .toolbar label[for="st-ada"],
+#st-habis:checked ~ .toolbar label[for="st-habis"] {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+#kat-elek:checked ~ .grid .item:not([data-kat="elek"]),
+#kat-atk:checked ~ .grid .item:not([data-kat="atk"]),
+#kat-perl:checked ~ .grid .item:not([data-kat="perl"]),
+#st-ada:checked ~ .grid .item:not([data-st="ada"]),
+#st-habis:checked ~ .grid .item:not([data-st="habis"]) {
+  display: none;
+}

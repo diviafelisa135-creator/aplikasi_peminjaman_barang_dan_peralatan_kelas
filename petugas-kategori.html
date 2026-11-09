@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kategori — Peminjaman Barang Kelas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Peminjaman Barang Kelas</div>
+    <nav>
+      <a href="petugas-dashboard.html">Dashboard</a>
+      <a href="petugas-barang.html">Data barang</a>
+      <a class="active" href="petugas-kategori.html">Kategori</a>
+      <a href="petugas-peminjam.html">Data peminjam</a>
+      <a href="petugas-transaksi.html">Transaksi</a>
+      <a href="petugas-laporan.html">Laporan</a>
+    </nav>
+    <div class="user">Nama petugas | <a href="index.html">Keluar</a></div>
+  </header>
+
+  <main>
+    <h1>Kategori</h1>
+    <p class="subtitle">Kelola kategori barang dan peralatan kelas.</p>
+
+    <div class="toolbar">
+      <input type="search" id="cari-tabel" class="grow" placeholder="Cari nama kategori atau kode...">
+      <span class="spacer"></span>
+      <a class="btn" href="petugas-tambah-kategori.html">+ Tambah Kategori</a>
+    </div>
+
+    <div class="card table-card">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Kode Kategori</th><th>Nama Kategori</th><th>Jumlah Barang</th><th>Aksi</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>KAT 001</td><td>Elektronik</td><td>1</td>
+              <td class="actions">
+                <a class="btn small secondary" href="petugas-barang.html">Lihat barang</a>
+                <a class="btn small secondary" href="petugas-tambah-kategori.html">Ubah</a>
+                <a class="btn small danger" href="petugas-kategori.html">Hapus</a>
+              </td>
+            </tr>
+            <tr>
+              <td>KAT 002</td><td>ATK</td><td>1</td>
+              <td class="actions">
+                <a class="btn small secondary" href="petugas-barang.html">Lihat barang</a>
+                <a class="btn small secondary" href="petugas-tambah-kategori.html">Ubah</a>
+                <a class="btn small danger" href="petugas-kategori.html">Hapus</a>
+              </td>
+            </tr>
+            <tr>
+              <td>KAT 003</td><td>Perlengkapan</td><td>1</td>
+              <td class="actions">
+                <a class="btn small secondary" href="petugas-barang.html">Lihat barang</a>
+                <a class="btn small secondary" href="petugas-tambah-kategori.html">Ubah</a>
+                <a class="btn small danger" href="petugas-kategori.html">Hapus</a>
+              </td>
+            </tr>
+            <tr>
+              <td>KAT 004</td><td>Lainnya</td><td>1</td>
+              <td class="actions">
+                <a class="btn small secondary" href="petugas-barang.html">Lihat barang</a>
+                <a class="btn small secondary" href="petugas-tambah-kategori.html">Ubah</a>
+                <a class="btn small danger" href="petugas-kategori.html">Hapus</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
